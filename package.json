@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kevin-smrt/API-AUTO-MAIL#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sib-api-v3-sdk": "^8.2.1"
   }
 }
