@@ -8,6 +8,9 @@ const router = require("./app/router");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// Permet au serveur de communiquer au format JSON
+app.use(express.json());
+
 // Utilisation du router
 app.use(router);
 
