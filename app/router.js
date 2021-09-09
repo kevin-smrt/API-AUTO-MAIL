@@ -5,7 +5,10 @@ const apiController = require("./controllers/apiController");
 // Initialisation du router
 const router = Router();
 
-// Route racine
-router.get('/', apiController.getAllContacts);
+// Renvoie tout les contacts
+router.get('/contacts', apiController.getAllContacts);
+
+// Renvoie les infos du contact passé en paramètre
+router.get('/contacts/:email', apiController.getOneContact);
 
 module.exports = router;
