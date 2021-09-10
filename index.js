@@ -8,6 +8,9 @@ const router = require("./app/router");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// built-in middleware d'express, sert à récuperer les données envoyés depuis un formulaire (par exemple)
+app.use(express.urlencoded({ extended: true }));
+
 // Permet au serveur de communiquer au format JSON
 app.use(express.json());
 
