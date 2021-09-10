@@ -11,4 +11,7 @@ router.get('/contacts', apiController.getAllContacts);
 // Renvoie les infos du contact passé en paramètre
 router.get('/contacts/:email', apiController.getOneContact);
 
+// Crée un contact
+router.post('/contacts/:email', apiController.createContact);
+
 module.exports = router;
