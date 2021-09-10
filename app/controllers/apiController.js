@@ -32,14 +32,19 @@ const apiController = {
     },
 
     createContact: async function (req, res) {
+        // Crée une instance de la classe contactsApi qui va permettre d'acceder aux méthodes pour gérer les contacts
         let apiInstance = new api.ContactsApi();
 
+        // Crée une une instance de la classe createContact qui va permettre de modifier les attributs du nouveau contact
         let createContact = new api.CreateContact();
 
+        // Récupère le prenom & nom du contact passé à travers le formulaire
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
 
+        // Initialise l'email avec celui passé en paramètre
         createContact.email = req.params.email;
+        // Initialise les attributs
         createContact.attributes = {
             NOM: lastName,
             PRENOM: firstName
