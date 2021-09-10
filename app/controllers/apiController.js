@@ -38,7 +38,7 @@ const apiController = {
 
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
-        console.log(firstName, lastName);
+
         createContact.email = req.params.email;
         createContact.attributes = {
             NOM: lastName,
