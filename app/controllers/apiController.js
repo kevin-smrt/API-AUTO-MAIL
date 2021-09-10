@@ -38,16 +38,18 @@ const apiController = {
         // Crée une une instance de la classe createContact qui va permettre de modifier les attributs du nouveau contact
         let createContact = new api.CreateContact();
 
-        // Récupère le prenom & nom du contact passé à travers le formulaire
+        // Récupère le prenom, nom et date d'anniversaire du contact passé à travers le formulaire
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
+        const birthDate = new Date(req.body.birthDate);
 
         // Initialise l'email avec celui passé en paramètre
         createContact.email = req.params.email;
         // Initialise les attributs
         createContact.attributes = {
             NOM: lastName,
-            PRENOM: firstName
+            PRENOM: firstName,
+            DATE_NAISSANCE: birthDate
         }
 
         try {
