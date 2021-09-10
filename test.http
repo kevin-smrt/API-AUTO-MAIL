@@ -1,0 +1,14 @@
+GET http://localhost:3000/contacts
+
+###
+
+GET http://localhost:3000/contacts/example@example.com
+
+###
+
+POST http://localhost:3000/contacts/example@example.com
+Content-Type: application/x-www-form-urlencoded
+
+firstName=Bernardo
+&lastName=Croquette
+&birthDate=June 19, 1993
